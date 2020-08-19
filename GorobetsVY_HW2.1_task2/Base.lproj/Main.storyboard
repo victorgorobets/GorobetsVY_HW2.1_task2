@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,70 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GorobetsVY_HW2_1_task2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grc-AD-I02">
+                                <rect key="frame" x="167" y="796" width="80" height="46"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Js3-RU-fxG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="wXD-im-oy9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressButtonChangeLight" destination="BYZ-38-t0r" eventType="touchUpInside" id="umT-lL-WcY"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hGE-4j-Cky">
+                                <rect key="frame" x="128" y="120" width="158" height="500"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rer-CO-IGb">
+                                        <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQW-I2-EZS">
+                                        <rect key="frame" x="0.0" y="171" width="158" height="158"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkn-ku-fHT">
+                                        <rect key="frame" x="0.0" y="342" width="158" height="158"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hGE-4j-Cky" secondAttribute="height" multiplier="79:250" id="aYj-pe-aLR"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hGE-4j-Cky" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="0Ee-9H-QQ8"/>
+                            <constraint firstItem="hGE-4j-Cky" firstAttribute="centerX" secondItem="Grc-AD-I02" secondAttribute="centerX" id="7ty-Xt-Ve0"/>
+                            <constraint firstItem="hGE-4j-Cky" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="76" id="A6F-40-JBE"/>
+                            <constraint firstItem="hGE-4j-Cky" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="LIs-JU-gB0"/>
+                            <constraint firstItem="Grc-AD-I02" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Znr-Fw-b9V"/>
+                            <constraint firstItem="Grc-AD-I02" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hGE-4j-Cky" secondAttribute="bottom" constant="8" symbolic="YES" id="taY-Ey-22A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Grc-AD-I02" secondAttribute="bottom" constant="20" id="une-MX-2Ca"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonChangeLight" destination="Grc-AD-I02" id="oR6-tT-x65"/>
+                        <outlet property="greenLightCircle" destination="dkn-ku-fHT" id="eOF-hC-eQM"/>
+                        <outlet property="redLightCircle" destination="Rer-CO-IGb" id="vzG-gh-JYs"/>
+                        <outlet property="yellowLightCircle" destination="XQW-I2-EZS" id="HTI-9E-8aa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>
         </scene>
     </scenes>
 </document>
